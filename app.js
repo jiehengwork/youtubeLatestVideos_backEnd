@@ -5,11 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
 const testAPIRouter = require('./routes/YouTubeAPI/testAPI');
-const channelIdRouter = require('./routes/YouTubeAPI/channelId');
+const SearchChannelRouter = require('./routes/YouTubeAPI/SearchChannel');
 
 var app = express();
 // CORS
@@ -25,12 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
 // API
 app.use('/YouTubeAPI/channel/testAPI', testAPIRouter);
-app.use('/YouTubeAPI/channel/channelId', channelIdRouter);
+app.use('/YouTubeAPI/channel/searchChannel', SearchChannelRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

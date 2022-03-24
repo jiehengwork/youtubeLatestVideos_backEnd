@@ -8,8 +8,8 @@ router.get('/', (req, res, next) => {
   
   // axios.get('https://www.googleapis.com/youtube/v3/videos?id=jeqH4eMGjhY&key='+ API_key +'&part=snippet')
 
-  const enID = encodeURI("超負荷")
-  axios.get('https://www.googleapis.com/youtube/v3/search?q='+ enID +'&type=channel&maxResults=10&key='+ API_key)
+  const enID = encodeURI("羅傑 Roger")
+  axios.get('https://www.googleapis.com/youtube/v3/search?q='+ enID +'&type=channel&maxResults=1&key='+ API_key)
   .then(response => {
       return response.data.items[0].id.channelId;
   })
