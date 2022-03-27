@@ -20,7 +20,7 @@ router.post('/', (req, res, next) => {
         const channelSmallImg = response.data.items[0].snippet.thumbnails.default.url;
         const channelMediumImg = response.data.items[0].snippet.thumbnails.medium.url;
         const channelBigImg = response.data.items[0].snippet.thumbnails.high.url;
-        res.json({ channelTitle: channelTitle, channelSmallImg: channelSmallImg, channelMediumImg: channelMediumImg, channelBigImg: channelBigImg })
+        res.json({ channelId: channelId, channelTitle: channelTitle, channelSmallImg: channelSmallImg, channelMediumImg: channelMediumImg, channelBigImg: channelBigImg })
       })
     })
   } catch (error) {
