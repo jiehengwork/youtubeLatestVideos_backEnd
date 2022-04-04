@@ -7,6 +7,7 @@ const cors = require('cors');
 
 const testAPIRouter = require('./routes/YouTubeAPI/testAPI');
 const SearchChannelRouter = require('./routes/YouTubeAPI/SearchChannel');
+const SearchNewVideoRouter = require('./routes/YouTubeAPI/SearchNewVideo');
 
 var app = express();
 // CORS
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // API
 app.use('/YouTubeAPI/channel/testAPI', testAPIRouter);
 app.use('/YouTubeAPI/channel/searchChannel', SearchChannelRouter);
+app.use('/YouTubeAPI/channel/searchNewVideo', SearchNewVideoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
