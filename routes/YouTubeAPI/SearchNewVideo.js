@@ -11,9 +11,9 @@ router.post('/', (req, res, next) => {
       .then(response => {
         const videoId = response.data.items[0].id.videoId;
         const videoTitle = response.data.items[0].snippet.title;
-        const videoSmallImg = response.data.items[0].thumbnails.default.url;
-        const videoMediumImg = response.data.items[0].thumbnails.medium.url;
-        const videoBigImg = response.data.items[0].thumbnails.high.url;
+        const videoSmallImg = response.data.items[0].snippet.thumbnails.default.url;
+        const videoMediumImg = response.data.items[0].snippet.thumbnails.medium.url;
+        const videoBigImg = response.data.items[0].snippet.thumbnails.high.url;
         res.json({ 'videoId': videoId, 'videoTitle': videoTitle, 'videoSmallImg': videoSmallImg, 'videoMediumImg': videoMediumImg, 'videoBigImg': videoBigImg })
       })
       .catch( err => {
