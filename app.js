@@ -23,8 +23,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // API
-app.use('/YouTubeAPI/channel/searchChannel', SearchChannelRouter);
-app.use('/YouTubeAPI/channel/searchNewVideo', SearchNewVideoRouter);
+app.use('/YouTubeAPI/search/searchChannel', SearchChannelRouter);
+app.use('/YouTubeAPI/search/searchNewVideo', SearchNewVideoRouter);
 
 // React front-end
 app.use(express.static(path.resolve(__dirname, './client/build')));
