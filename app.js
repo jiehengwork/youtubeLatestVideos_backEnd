@@ -24,7 +24,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // API
-app.use('/YouTubeAPI/channel/testAPI', testAPIRouter);
 app.use('/YouTubeAPI/channel/searchChannel', SearchChannelRouter);
 app.use('/YouTubeAPI/channel/searchNewVideo', SearchNewVideoRouter);
 
