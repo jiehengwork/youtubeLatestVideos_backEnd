@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
 
-const testAPIRouter = require('./routes/YouTubeAPI/testAPI');
 const SearchChannelRouter = require('./routes/YouTubeAPI/SearchChannel');
 const SearchNewVideoRouter = require('./routes/YouTubeAPI/SearchNewVideo');
 
