@@ -27,6 +27,7 @@ router.post('/', (req, res, next) => {
     })
     .catch( err => {
       console.log( err )
+      res.status(202).send('error')
     })
   } catch (error) {
     next(error);
